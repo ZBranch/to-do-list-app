@@ -1,3 +1,4 @@
+function newItem() {
 //1. Adding a new item to the list:
 
   let li = $('<li></li>');
@@ -10,13 +11,9 @@
     $('#list').append(li);
   }
 //2. Crossing an item out:
-  function crossOut() {
-		li.toggleClass("strike");
-	}
-
-	li.on("dblclick", function crossOut() {
-		li.toggleClass("strike");
-	});
+  li.on("dblclick", function () {
+    li.toggleClass("strike");
+  });
 //3. Adding a delete button
   let crossOutButton = $('<crossOutButton></crossOutButton>');
   crossOutButton.append(document.createTextNode('X'));
@@ -27,3 +24,4 @@ function deleteListItem(){
 li.addClass("delete")
  	}
    $('#list').sortable();
+} 
